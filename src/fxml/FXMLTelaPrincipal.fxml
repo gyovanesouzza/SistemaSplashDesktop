@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLTelaPrincipalController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="254.0" style="-fx-background-color: #0080FF;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblNome" alignment="CENTER" layoutY="133.0" prefHeight="20.0" prefWidth="254.0" styleClass="TEXT" stylesheets="@../css/styleTelaPrincipal.css" text="nome" />
+                  <Label fx:id="lblEmail" alignment="CENTER" layoutY="159.0" prefHeight="20.0" prefWidth="254.0" text="email" />
+                  <Avatar fx:id="avUsuario" layoutX="77.0" layoutY="26.0" radius="50.0">
+                     <image>
+                        <Image url="@../img/ft.jpg" />
+                     </image>
+                  </Avatar>
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Home" textFill="#1b1818">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnTurmas" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#actionTurma" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Turmas" textFill="#1b1818">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" />
+               </graphic>
+            </JFXButton>
+           
+            <JFXButton fx:id="btnProfessores" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#actionProfessor" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Professores">
+               <graphic>
+                  <FontAwesomeIconView size="25" />
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUsuarios" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Usuários">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USERS" size="25" />
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnRelatorio" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Relatório">
+               <graphic>
+                  <FontAwesomeIconView size="25" />
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnConfiguracoes" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Configurações">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GEAR" size="25" />
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="rootPaneMudar" layoutX="254.0" prefHeight="720.0" prefWidth="949.0">
+         <children>
+            <Pane fx:id="paneTitulo" layoutY="40.0" prefHeight="179.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="39.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Sistema Splash" />
+                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="81.0" prefHeight="18.0" prefWidth="241.0" style="-fx-font-size: 17;" text="Souzza Corporation " />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

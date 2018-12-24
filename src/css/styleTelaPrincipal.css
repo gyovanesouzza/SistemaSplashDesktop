@@ -1,0 +1,16 @@
+.button{
+    -fx-backgroud-color: #3F2B63;
+    
+}
+.button:houve{
+    -fx-backgroud-color: #4382C1;
+}
+.button:pressed{
+    -fx-backgroud-color: #73A3EF;
+}
+
+.lblTitulo{
+    -fx-backgroud-color: #FFFFFF;
+    -fx-font-size: 20px;
+}
+

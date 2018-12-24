@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLControllerTelaLogin">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="26.0" prefHeight="449.0" prefWidth="784.0" style="-fx-background-radius: 0.5em; -fx-background-color: #ffff;">
+         <children>
+            <JFXTextField fx:id="txtUsuario" layoutX="461.0" layoutY="182.0" maxWidth="239.0" minWidth="178.0" prefHeight="32.0" prefWidth="239.0" promptText="Usuario" />
+            <JFXPasswordField fx:id="txtSenha" layoutX="461.0" layoutY="252.0" maxWidth="239.0" minWidth="179.0" prefHeight="32.0" prefWidth="239.0" promptText="Senha" />
+            <FontAwesomeIconView glyphName="USER" layoutX="541.0" layoutY="126.0" size="110" />
+            <JFXButton fx:id="btnClose" contentDisplay="TOP" layoutX="737.0" minWidth="29.0" onMouseClicked="#handlerButtonCliecks" prefHeight="36.0" prefWidth="29.0" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEntrar" layoutX="544.0" layoutY="340.0" onMouseClicked="#handlerButtonCliecks" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #2196F3;" text="Entrar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="329.0" style="-fx-background-color: #2196F3;">
+         <children>
+            <FontAwesomeIconView glyphName="CLOUD" layoutX="116.0" layoutY="184.0" size="80" />
+            <Label layoutX="38.0" layoutY="207.0" style="-fx-font-size: 35;" text="Sistema Splash" />
+            <Label layoutX="109.0" layoutY="259.0" style="-fx-font-size: 15;" text="Versão 0.0.9" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

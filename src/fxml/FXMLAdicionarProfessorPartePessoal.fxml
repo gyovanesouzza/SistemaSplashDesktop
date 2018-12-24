@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="acCorpo" prefHeight="481.0" prefWidth="949.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAdicionarProfessorPartePessoalController">
+    <stylesheets>
+        <URL value="@/css/fxmladicionarprofessor.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="pnPrincipal" prefHeight="481.0" prefWidth="963.0">
+         <children>
+            <Label fx:id="lblTitulo" alignment="CENTER" layoutX="81.0" layoutY="23.0" prefHeight="32.0" prefWidth="798.0" text="Cadastro de Professor">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pnTroca" layoutY="72.0" prefHeight="410.0" prefWidth="963.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="35.0" text="Nome Completo : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="77.0" text="Data Nasc. : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="117.0" text="Sexo :">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="44.0" layoutY="156.0" text="CPF : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="197.0" text="Naturalidade : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="454.0" layoutY="197.0" text="Natural de : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNome" layoutX="182.0" layoutY="30.0" maxWidth="573.0" minWidth="570.0" prefHeight="31.0" prefWidth="573.0" />
+                  <JFXTextField fx:id="txtNaturalidade" layoutX="182.0" layoutY="190.0" maxWidth="200.0" minWidth="200.0" prefHeight="31.0" prefWidth="200.0" />
+                  <JFXTextField fx:id="txtNatural" layoutX="562.0" layoutY="192.0" maxWidth="193.0" minWidth="186.0" prefHeight="31.0" prefWidth="193.0" />
+                  <JFXTextField fx:id="txtCpf" layoutX="182.0" layoutY="151.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" />
+                  <JFXComboBox fx:id="cbSexo" layoutX="182.0" layoutY="115.0" prefHeight="25.0" prefWidth="157.0" />
+                  <JFXDatePicker fx:id="dpDataNasc" layoutX="182.0" layoutY="72.0" prefHeight="31.0" prefWidth="157.0" />
+                  <Label fx:id="lblCancelar" layoutX="578.0" layoutY="353.0" onMouseClicked="#clickedVolta">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" size="20.0" />
+                     </graphic>
+                  </Label>
+                  <JFXButton fx:id="btnProximo" layoutX="130.0" layoutY="353.0" onMouseClicked="#clickedProximo">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FORWARD" size="20.0" text="" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>

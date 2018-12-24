@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="949.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLProfessoresController">
+    <stylesheets>
+        <URL value="@/css/fxmlprofessores.css" />
+    </stylesheets>
+    <children>
+      <Pane fx:id="paneCorpo" layoutY="239.0" prefHeight="481.0" prefWidth="949.0">
+         <children>
+              <TableView fx:id="tblProfessor" layoutX="16.0" layoutY="39.0" prefHeight="369.0" prefWidth="919.0">
+                  <columns>
+                      <TableColumn fx:id="tcCodigo" prefWidth="75.0" text="Codigo" />
+                      <TableColumn fx:id="tcNome" prefWidth="401.0" text="Nome" />
+                  <TableColumn fx:id="tcMateria" minWidth="0.0" prefWidth="336.0" text="Materia" />
+                  <TableColumn fx:id="tcQtdAulas" prefWidth="106.0" text="Qtd de Aula" />
+                  </columns>
+              </TableView>
+              <JFXButton fx:id="btnAdicionar" layoutX="157.0" layoutY="431.0" onAction="#actionAdicionar" prefHeight="25.0" prefWidth="113.0" text="Adicionar " />
+              <JFXButton fx:id="btnAlterar" layoutX="362.0" layoutY="431.0" onAction="#actionAlterar" prefHeight="25.0" prefWidth="113.0" text="Alterar" />
+              <JFXButton fx:id="btnExcluir" layoutX="708.0" layoutY="431.0" onAction="#actionExcluir" prefHeight="25.0" prefWidth="113.0" text="Excluir" />
+              <JFXButton fx:id="btnVisualizar" layoutX="519.0" layoutY="431.0" onAction="#actionVisualizar" prefHeight="25.0" prefWidth="113.0" text="Visualizar" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneTitulo" prefHeight="240.0" prefWidth="949.0">
+         <children>
+              <Pane layoutY="31.0" prefHeight="200.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="56.0" layoutY="41.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Professores" />
+                  <Label fx:id="lblDir" alignment="TOP_LEFT" layoutX="63.0" layoutY="31.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 15;" text="/home/professores" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
