@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="acCorpo" prefHeight="481.0" prefWidth="949.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAdicionarProfessorPartePessoalController">
     <stylesheets>
-        <URL value="@/css/fxmladicionarprofessor.css" />
+        <URL value="@/css/fxmladicionarprofessoroartepessoal.css" />
     </stylesheets>
    <children>
       <Pane fx:id="pnPrincipal" prefHeight="481.0" prefWidth="963.0">

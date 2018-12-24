@@ -70,7 +70,7 @@ public class FXMLAdicionarProfessorPartePessoalController implements Initializab
     void clickedProximo(MouseEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/FXMLAdicionarProfessorParteContato.fxml"));
         pnTroca.getChildren().setAll(pane);
-
+        
     }
 
     @FXML
