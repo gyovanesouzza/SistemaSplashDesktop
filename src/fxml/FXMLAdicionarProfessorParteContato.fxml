@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="963.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAdicionarProfessorParteContatoController">
+<AnchorPane id="AnchorPane" fx:id="acCorpo" prefHeight="410.0" prefWidth="963.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAdicionarProfessorParteContatoController">
     <stylesheets>
         <URL value="@/css/fxmladicionarprofessorpartecontato.css" />
     </stylesheets>
    <children>
-      <Pane prefHeight="410.0" prefWidth="963.0">
+      <Pane fx:id="pnTroca" prefHeight="410.0" prefWidth="963.0">
          <children>
             <Label layoutX="43.0" layoutY="35.0" text="CEP : ">
                <font>
@@ -51,13 +51,13 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="149.0" layoutY="30.0" />
-            <JFXTextField layoutX="156.0" layoutY="75.0" maxWidth="363.0" minWidth="363.0" prefHeight="31.0" prefWidth="363.0" />
-            <JFXTextField layoutX="156.0" layoutY="119.0" maxWidth="363.0" minWidth="363.0" prefHeight="31.0" prefWidth="363.0" />
-            <JFXTextField layoutX="156.0" layoutY="166.0" maxWidth="162.0" minWidth="162.0" prefHeight="31.0" prefWidth="162.0" />
-            <JFXTextField layoutX="153.0" layoutY="213.0" maxWidth="363.0" minWidth="363.0" prefHeight="31.0" prefWidth="363.0" />
-            <JFXTextField layoutX="573.0" layoutY="168.0" maxWidth="194.0" minWidth="184.0" prefHeight="31.0" prefWidth="162.0" />
-            <JFXTextField layoutX="598.0" layoutY="75.0" maxWidth="66.0" minWidth="66.0" prefHeight="31.0" prefWidth="66.0" />
+            <JFXTextField fx:id="txtCep" layoutX="149.0" layoutY="30.0" />
+            <JFXTextField fx:id="txtRua" layoutX="156.0" layoutY="75.0" maxWidth="363.0" minWidth="363.0" prefHeight="31.0" prefWidth="363.0" />
+            <JFXTextField fx:id="txtNumero" layoutX="598.0" layoutY="75.0" maxWidth="66.0" minWidth="66.0" prefHeight="31.0" prefWidth="66.0" />
+            <JFXTextField fx:id="txtComplemento" layoutX="156.0" layoutY="119.0" maxWidth="363.0" minWidth="363.0" prefHeight="31.0" prefWidth="363.0" />
+            <JFXTextField fx:id="txtTelefone" layoutX="156.0" layoutY="166.0" maxWidth="162.0" minWidth="162.0" prefHeight="31.0" prefWidth="162.0" />
+            <JFXTextField fx:id="txtCelular" layoutX="573.0" layoutY="168.0" maxWidth="194.0" minWidth="184.0" prefHeight="31.0" prefWidth="162.0" />
+            <JFXTextField fx:id="txtEmail" layoutX="153.0" layoutY="213.0" maxWidth="363.0" minWidth="363.0" prefHeight="31.0" prefWidth="363.0" />
             <JFXButton fx:id="btnProximo" layoutX="130.0" layoutY="353.0" onMouseClicked="#clickedProximo">
                <graphic>
                   <FontAwesomeIconView glyphName="FORWARD" size="20.0" text="" />
