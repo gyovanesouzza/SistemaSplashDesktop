@@ -29,11 +29,11 @@
               <JFXButton fx:id="btnVisualizar" layoutX="519.0" layoutY="431.0" onAction="#actionVisualizar" prefHeight="25.0" prefWidth="113.0" text="Visualizar" />
          </children>
       </Pane>
-      <Pane fx:id="paneTitulo" prefHeight="240.0" prefWidth="949.0">
+      <Pane fx:id="paneTitulo" prefHeight="212.0" prefWidth="949.0">
          <children>
-              <Pane layoutY="31.0" prefHeight="200.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
+              <Pane layoutY="30.0" prefHeight="179.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
                <children>
-                  <Label alignment="TOP_LEFT" layoutX="56.0" layoutY="41.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Professores" />
+                  <Label alignment="TOP_LEFT" layoutX="63.0" layoutY="41.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Professores" />
                   <Label fx:id="lblDir" alignment="TOP_LEFT" layoutX="63.0" layoutY="31.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 15;" text="/home/professores" />
                </children>
             </Pane>

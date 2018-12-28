@@ -12,15 +12,15 @@
         <URL value="@/css/fxmltelaprincipaltroca.css" />
     </stylesheets>
    <children>
-      <Pane prefHeight="720.0">
+      <Pane prefHeight="720.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane fx:id="paneTitulo" layoutY="40.0" prefHeight="179.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
+            <Pane fx:id="paneTitulo" layoutY="30.0" prefHeight="179.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
                <children>
-                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="39.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Sistema Splash" />
-                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="81.0" prefHeight="18.0" prefWidth="241.0" style="-fx-font-size: 17;" text="Souzza Corporation " />
+                  <Label alignment="TOP_LEFT" layoutX="63.0" layoutY="39.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Sistema Splash" />
+                  <Label alignment="TOP_LEFT" layoutX="63.0" layoutY="81.0" prefHeight="18.0" prefWidth="241.0" style="-fx-font-size: 17;" text="Souzza Corporation " />
                </children>
             </Pane>
-            <Label layoutX="304.0" layoutY="381.0" prefHeight="80.0" prefWidth="262.0" text="Contruido...">
+            <Label layoutX="344.0" layoutY="360.0" prefHeight="80.0" prefWidth="262.0" text="Contruido...">
                <font>
                   <Font size="36.0" />
                </font>

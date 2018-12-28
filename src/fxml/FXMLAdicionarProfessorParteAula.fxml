@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.net.URL?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -81,6 +83,16 @@
             <CheckBox fx:id="cbQuaNot" layoutX="430.0" layoutY="186.0" mnemonicParsing="false" />
             <CheckBox fx:id="cbQuiNot" layoutX="481.0" layoutY="186.0" mnemonicParsing="false" />
             <CheckBox fx:id="cbSexNot" layoutX="541.0" layoutY="186.0" mnemonicParsing="false" />
+            <JFXButton layoutX="130.0" layoutY="353.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CHECK" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="578.0" layoutY="353.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REPLY" size="20" />
+               </graphic>
+            </JFXButton>
          </children>
       </Pane>
    </children>
