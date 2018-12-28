@@ -41,32 +41,35 @@ import model.Usuario;
  * @author GYOVANEPEREIRADESOUZ
  */
 public class FXMLControllerTelaLogin implements Initializable {
-    
-    static Usuario usuario = new Usuario();
-    
-    private WebServiceUsuario serviceUsuario = new WebServiceUsuario();
-    private double xOffset = 0;
-    private double yOffset = 0;
+
+    @FXML
+    private AnchorPane acBarraTitulo;
+
     @FXML
     private JFXTextField txtUsuario;
-    
+
     @FXML
     private JFXPasswordField txtSenha;
-    
+
     @FXML
     private JFXButton btnEntrar;
     @FXML
     private JFXButton btnClose;
-    public FXMLControllerTelaLogin controller;
-    
+
+    FXMLControllerTelaLogin controller;
+    static Usuario usuario = new Usuario();
+    private WebServiceUsuario serviceUsuario = new WebServiceUsuario();
+    private double xOffset = 0;
+    private double yOffset = 0;
+
     @FXML
     private void handlerButtonCliecks(MouseEvent evt) {
         if (evt.getSource() == btnEntrar) {
-            
+
             try {
                 usuario.setLogin(txtUsuario.getText());
                 usuario.setSenha(txtSenha.getText());
-                
+
                 if (serviceUsuario.logar(usuario)) {
                     usuario = serviceUsuario.informacoesConta(usuario);
                     try {
@@ -74,7 +77,7 @@ public class FXMLControllerTelaLogin implements Initializable {
                         Stage stage = (Stage) node.getScene().getWindow();
                         stage.close();
                         Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLTelaPrincipal.fxml"));
-                        
+
                         root.setOnMousePressed((MouseEvent event) -> {
                             xOffset = event.getSceneX();
                             yOffset = event.getSceneY();
@@ -83,7 +86,7 @@ public class FXMLControllerTelaLogin implements Initializable {
                             stage.setX(event.getScreenX() - xOffset);
                             stage.setY(event.getScreenY() - yOffset);
                         });
-                        
+
                         Scene scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();
@@ -97,22 +100,24 @@ public class FXMLControllerTelaLogin implements Initializable {
                     alert.setHeaderText(null);
                     alert.setContentText("Usuario Errado");
                     alert.showAndWait();
-                    
+
                 }
             } catch (IOException ex) {
                 Logger.getLogger(FXMLControllerTelaLogin.class
                         .getName()).log(Level.SEVERE, null, ex);
             }
         }
-        if (evt.getSource() == btnClose) {
-            System.exit(0);
-            
-        }
+
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        try {
+            AnchorPane barra = FXMLLoader.load(getClass().getResource("/fxml/FXMLBarraTitulo.fxml"));
+            acBarraTitulo.getChildren().setAll(barra);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLControllerTelaLogin.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
+
 }

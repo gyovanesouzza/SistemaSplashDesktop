@@ -10,11 +10,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLTelaPrincipalController">
+<AnchorPane id="AnchorPane" fx:id="acPrincipal" prefHeight="740.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLTelaPrincipalController">
    <children>
-      <VBox prefHeight="720.0" prefWidth="254.0" style="-fx-background-color: #0080FF;">
+      <AnchorPane fx:id="acBarraTitulo" layoutX="971.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox prefHeight="740.0" prefWidth="254.0" style="-fx-background-color: #0080FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane prefHeight="200.0" prefWidth="200.0">
+            <Pane prefHeight="200.0" prefWidth="254.0">
                <children>
                   <Label fx:id="lblNome" alignment="CENTER" layoutY="133.0" prefHeight="20.0" prefWidth="254.0" styleClass="TEXT" stylesheets="@../css/styleTelaPrincipal.css" text="nome" />
                   <Label fx:id="lblEmail" alignment="CENTER" layoutY="159.0" prefHeight="20.0" prefWidth="254.0" text="email" />
@@ -25,7 +26,7 @@
                   </Avatar>
                </children>
             </Pane>
-            <JFXButton fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Home" textFill="#1b1818">
+            <JFXButton fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#actionHome" prefHeight="44.0" prefWidth="254.0" stylesheets="@../css/styleTelaPrincipal.css" text="Home" textFill="#1b1818">
                <font>
                   <Font size="20.0" />
                </font>
@@ -38,7 +39,7 @@
                   <Font size="20.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" />
+                  <FontAwesomeIconView glyphName="ADDRESS_BOOK_ALT" size="25" />
                </graphic>
             </JFXButton>
            
@@ -76,15 +77,6 @@
             </JFXButton>
          </children>
       </VBox>
-      <AnchorPane fx:id="rootPaneMudar" layoutX="254.0" prefHeight="720.0" prefWidth="949.0">
-         <children>
-            <Pane fx:id="paneTitulo" layoutY="40.0" prefHeight="179.0" prefWidth="949.0" style="-fx-background-color: #00A3D8;">
-               <children>
-                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="39.0" prefHeight="18.0" prefWidth="294.0" style="-fx-font-size: 35;" text="Sistema Splash" />
-                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="81.0" prefHeight="18.0" prefWidth="241.0" style="-fx-font-size: 17;" text="Souzza Corporation " />
-               </children>
-            </Pane>
-         </children>
-      </AnchorPane>
+      <AnchorPane fx:id="rootPaneMudar" layoutX="254.0" prefHeight="720.0" prefWidth="949.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

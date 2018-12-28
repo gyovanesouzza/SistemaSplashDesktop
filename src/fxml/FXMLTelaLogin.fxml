@@ -14,12 +14,8 @@
             <JFXTextField fx:id="txtUsuario" layoutX="461.0" layoutY="182.0" maxWidth="239.0" minWidth="178.0" prefHeight="32.0" prefWidth="239.0" promptText="Usuario" />
             <JFXPasswordField fx:id="txtSenha" layoutX="461.0" layoutY="252.0" maxWidth="239.0" minWidth="179.0" prefHeight="32.0" prefWidth="239.0" promptText="Senha" />
             <FontAwesomeIconView glyphName="USER" layoutX="541.0" layoutY="126.0" size="110" />
-            <JFXButton fx:id="btnClose" contentDisplay="TOP" layoutX="737.0" minWidth="29.0" onMouseClicked="#handlerButtonCliecks" prefHeight="36.0" prefWidth="29.0" textAlignment="CENTER">
-               <graphic>
-                  <FontAwesomeIconView glyphName="CLOSE" size="20" />
-               </graphic>
-            </JFXButton>
             <JFXButton fx:id="btnEntrar" layoutX="544.0" layoutY="340.0" onMouseClicked="#handlerButtonCliecks" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #2196F3;" text="Entrar" />
+            <AnchorPane fx:id="acBarraTitulo" layoutX="563.0" prefHeight="20.0" prefWidth="221.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="500.0" prefWidth="329.0" style="-fx-background-color: #2196F3;">

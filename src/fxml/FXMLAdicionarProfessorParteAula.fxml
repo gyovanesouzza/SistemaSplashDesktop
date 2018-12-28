@@ -1,23 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="953.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.FXMLAdicionarProfessorParteAulaController">
+<AnchorPane id="AnchorPane" fx:id="acCorpo" prefHeight="410.0" prefWidth="953.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAdicionarProfessorParteAulaController">
     <stylesheets>
         <URL value="@/css/fxmladicionarprofessorparteaula.css" />
     </stylesheets>
    <children>
-      <Pane prefHeight="410.0" prefWidth="953.0">
+      <Pane fx:id="pnTroca" prefHeight="410.0" prefWidth="953.0">
          <children>
             <Label layoutX="43.0" layoutY="35.0" text="Leciona : ">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
+            <Label layoutX="43.0" layoutY="81.0" text="Dia/Turno Disponível : ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="293.0" layoutY="81.0" text="SEG">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="361.0" layoutY="81.0" text="TER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="425.0" layoutY="81.0" text="QUA">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="479.0" layoutY="81.0" text="QUI">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="539.0" layoutY="81.0" text="SEX">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="194.0" layoutY="116.0" text="Matutino">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="194.0" layoutY="152.0" text="Vespertino">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="184.0" text="Noturno">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <CheckComboBox fx:id="cbMaterias" layoutX="118.0" layoutY="33.0" prefHeight="25.0" prefWidth="452.0" />
+            <CheckBox fx:id="cbSegMat" layoutX="294.0" layoutY="117.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbSegVes" layoutX="295.0" layoutY="154.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbSegNot" layoutX="294.0" layoutY="186.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbTerVes" layoutX="363.0" layoutY="154.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbQuaVes" layoutX="430.0" layoutY="154.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbQuiVes" layoutX="481.0" layoutY="154.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbSexVes" layoutX="541.0" layoutY="154.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbTerMat" layoutX="363.0" layoutY="117.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbQuaMat" layoutX="430.0" layoutY="118.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbQuiMat" layoutX="481.0" layoutY="118.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbSexMat" layoutX="541.0" layoutY="117.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbTerNot" layoutX="363.0" layoutY="186.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbQuaNot" layoutX="430.0" layoutY="186.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbQuiNot" layoutX="481.0" layoutY="186.0" mnemonicParsing="false" />
+            <CheckBox fx:id="cbSexNot" layoutX="541.0" layoutY="186.0" mnemonicParsing="false" />
          </children>
       </Pane>
    </children>

@@ -33,71 +33,88 @@ import model.Usuario;
  * @author GYOVANEPEREIRADESOUZ
  */
 public class FXMLTelaPrincipalController implements Initializable {
-    
+
     Usuario usuario = new Usuario();
     
     @FXML
+    private AnchorPane acPrincipal;
+
+    @FXML
+    private AnchorPane acBarraTitulo;
+
+    @FXML
     private Label lblNome;
-    
+
     @FXML
     private Label lblEmail;
-    
+
     @FXML
     private Avatar avUsuario;
-    
+
     @FXML
     private JFXButton btnHome;
-    
+
     @FXML
     private JFXButton btnTurmas;
-    
+
     @FXML
     private FontAwesomeIconView btnTurmas1;
-    
+
     @FXML
     private JFXButton btnProfessores;
-    
+
     @FXML
     private JFXButton btnUsuarios;
-    
+
     @FXML
     private JFXButton btnRelatorio;
-    
+
     @FXML
     private JFXButton btnConfiguracoes;
-    
+
     @FXML
     private Pane paneTitulo;
-    
+
     @FXML
     private Label lblTitulo;
-    
+
     @FXML
     private AnchorPane rootPaneMudar;
-    
+
     @FXML
     void actionHome(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/FXMLTurma.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/FXMLTelaPrincipalTroca.fxml"));
         rootPaneMudar.getChildren().setAll(pane);
     }
+
     @FXML
     void actionTurma(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/FXMLTurma.fxml"));
         rootPaneMudar.getChildren().setAll(pane);
     }
-    
+
     @FXML
     void actionProfessor(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/FXMLProfessores.fxml"));
         rootPaneMudar.getChildren().setAll(pane);
     }
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        usuario = FXMLControllerTelaLogin.usuario;
-        lblNome.setText(usuario.getNome());
-        lblEmail.setText(usuario.getEmail());
-        
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("/fxml/FXMLTelaPrincipalTroca.fxml"));
+            rootPaneMudar.getChildren().setAll(pane);
+            
+            AnchorPane barra = FXMLLoader.load(getClass().getResource("/fxml/FXMLBarraTitulo.fxml"));
+            acBarraTitulo.getChildren().setAll(barra);
+
+            usuario = FXMLControllerTelaLogin.usuario;
+            lblNome.setText(usuario.getNome());
+            lblEmail.setText(usuario.getEmail());
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLTelaPrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
-    
+
 }

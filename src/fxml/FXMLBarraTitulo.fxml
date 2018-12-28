@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="20.0" prefWidth="300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLBarraTituloController">
+    <stylesheets>
+        <URL value="@/css/fxmlbarratitulo.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="20.0" prefWidth="307.0">
+         <children>
+            <JFXButton fx:id="btnMinimizar" layoutX="136.0" onAction="#actionMinimizar" prefHeight="25.0" prefWidth="64.0">
+               <graphic>
+                  <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" size="15" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMaximizar" layoutX="200.0" onAction="#actionMaxinizar">
+               <graphic>
+                  <MaterialDesignIconView glyphName="WINDOW_MAXIMIZE" size="15" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnFechar" layoutX="260.0" onAction="#actionFechar">
+               <graphic>
+                  <MaterialDesignIconView glyphName="WINDOW_CLOSE" size="15" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
