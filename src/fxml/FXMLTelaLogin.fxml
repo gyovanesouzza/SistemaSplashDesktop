@@ -7,23 +7,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLControllerTelaLogin">
-   <children>
-      <AnchorPane layoutX="-6.0" layoutY="26.0" prefHeight="449.0" prefWidth="784.0" style="-fx-background-radius: 0.5em; -fx-background-color: #ffff;">
-         <children>
-            <JFXTextField fx:id="txtUsuario" layoutX="461.0" layoutY="182.0" maxWidth="239.0" minWidth="178.0" prefHeight="32.0" prefWidth="239.0" promptText="Usuario" />
-            <JFXPasswordField fx:id="txtSenha" layoutX="461.0" layoutY="252.0" maxWidth="239.0" minWidth="179.0" onKeyPressed="#keyPressedEntrar" prefHeight="32.0" prefWidth="239.0" promptText="Senha" />
-            <FontAwesomeIconView glyphName="USER" layoutX="541.0" layoutY="126.0" size="110" />
-            <JFXButton fx:id="btnEntrar" layoutX="544.0" layoutY="340.0" onMouseClicked="#mouseClickedEntrar" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #2196F3;" text="Entrar" />
-            <AnchorPane fx:id="acBarraTitulo" layoutX="452.0" prefHeight="20.0" prefWidth="319.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="500.0" prefWidth="329.0" style="-fx-background-color: #2196F3;">
-         <children>
-            <FontAwesomeIconView glyphName="CLOUD" layoutX="116.0" layoutY="184.0" size="80" />
-            <Label layoutX="38.0" layoutY="207.0" style="-fx-font-size: 35;" text="Sistema Splash" />
-            <Label layoutX="109.0" layoutY="259.0" style="-fx-font-size: 15;" text="Versão 0.0.9" />
-         </children>
-      </AnchorPane>
-   </children>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: transparent;" styleClass="mainFxmlClass" stylesheets="@../css/fxmltelalogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLControllerTelaLogin">
+    <children>
+        <AnchorPane layoutY="26.0" prefHeight="449.0" prefWidth="784.0" styleClass="aclogin" stylesheets="@../css/fxmltelalogin.css">
+            <children>
+                <JFXTextField fx:id="txtUsuario" layoutX="461.0" layoutY="182.0" maxWidth="239.0" minWidth="178.0" prefHeight="32.0" prefWidth="239.0" promptText="Usuario" styleClass="txtusuario" stylesheets="@../css/fxmltelalogin.css" />
+                <JFXPasswordField fx:id="txtSenha" layoutX="461.0" layoutY="252.0" maxWidth="239.0" minWidth="179.0" onKeyPressed="#keyPressedEntrar" prefHeight="32.0" prefWidth="239.0" promptText="Senha" styleClass="txtsenha" stylesheets="@../css/fxmltelalogin.css" />
+                <FontAwesomeIconView glyphName="USER" layoutX="541.0" layoutY="126.0" size="110" />
+                <JFXButton fx:id="btnEntrar" layoutX="544.0" layoutY="340.0" onMouseClicked="#mouseClickedEntrar" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #2196F3;" text="Entrar" />
+            <fx:include layoutX="452.0" source="FXMLBarraTitulo.fxml" />
+                <Label fx:id="lblEsqueceuSenha" layoutX="461.0" layoutY="288.0" onMouseClicked="#mouseClickedEsqueceuSenha" prefHeight="17.0" prefWidth="313.0" styleClass="lblesqueceu" stylesheets="@../css/fxmltelalogin.css" text="Esqueceu senha">
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="500.0" prefWidth="329.0" style="-fx-background-color: #2196F3;">
+            <children>
+                <FontAwesomeIconView glyphName="CLOUD" layoutX="116.0" layoutY="184.0" size="80" />
+                <Label layoutX="38.0" layoutY="207.0" styleClass="lbltitulo" stylesheets="@../css/fxmltelalogin.css" text="Sistema Splash" />
+                <Label layoutX="32.0" layoutY="259.0" prefHeight="21.0" prefWidth="230.0" styleClass="lblversao" stylesheets="@../css/fxmltelalogin.css" text="Versão 1.0" />
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>

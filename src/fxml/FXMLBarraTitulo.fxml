@@ -13,17 +13,17 @@
    <children>
       <Pane prefHeight="20.0" prefWidth="307.0">
          <children>
-            <JFXButton fx:id="btnMinimizar" layoutX="136.0" onAction="#actionMinimizar" prefHeight="25.0" prefWidth="64.0">
+            <JFXButton fx:id="btnMinimizar" layoutX="140.0" onAction="#actionMinimizar" prefHeight="25.0" prefWidth="60.0" ripplerFill="#c3bebe" styleClass="btns" stylesheets="@../css/fxmlbarratitulo.css">
                <graphic>
                   <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" size="15" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnMaximizar" layoutX="200.0" onAction="#actionMaxinizar">
+            <JFXButton fx:id="btnMaximizar" layoutX="200.0" onAction="#actionMaxinizar" prefHeight="25.0" prefWidth="60.0" ripplerFill="#c3bebe" styleClass="btns" stylesheets="@../css/fxmlbarratitulo.css">
                <graphic>
                   <MaterialDesignIconView glyphName="WINDOW_MAXIMIZE" size="15" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnFechar" layoutX="260.0" onAction="#actionFechar">
+            <JFXButton fx:id="btnFechar" layoutX="260.0" onAction="#actionFechar" prefHeight="25.0" prefWidth="65.0" ripplerFill="#dd6f6f" styleClass="btnfechar" stylesheets="@../css/fxmlbarratitulo.css">
                <graphic>
                   <MaterialDesignIconView glyphName="WINDOW_CLOSE" size="15" />
                </graphic>

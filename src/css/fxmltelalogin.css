@@ -1,0 +1,32 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+}
+
+
+.aclogin{
+    -fx-background-radius : 0.5em;
+    -fx-background-color :  #ffff
+}
+
+.lblesqueceu{
+    -fx-text-fill: blue;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+}
+.lblesqueceu:hover{
+    -fx-text-fill: #6495ED;
+}
+
+.lbltitulo{
+    -fx-text-fill: black;
+    -fx-font-size: 35px;
+}
+
+.lblversao{
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-alignment: center-left;
+}

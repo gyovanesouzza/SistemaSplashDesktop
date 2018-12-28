@@ -56,6 +56,9 @@ public class FXMLControllerTelaLogin implements Initializable {
     @FXML
     private JFXButton btnClose;
 
+    @FXML
+    private Label lblEsqueceuSenha;
+
     FXMLControllerTelaLogin controller;
     static Usuario usuario = new Usuario();
     private WebServiceUsuario serviceUsuario = new WebServiceUsuario();
@@ -93,6 +96,15 @@ public class FXMLControllerTelaLogin implements Initializable {
             }
         }
 
+    }
+
+    @FXML
+    void mouseClickedEsqueceuSenha(MouseEvent event) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Informação");
+        alert.setHeaderText(null);
+        alert.setContentText("Construindo...");
+        alert.showAndWait();
     }
 
     @FXML

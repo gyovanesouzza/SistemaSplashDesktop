@@ -2,6 +2,18 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
-
+.button{
+    -fx-background-color: #FFFFFF;
 }
+
+
+.btnfechar:hover{
+    -fx-background-color:#E81123;
+}  
+
+.btns:hover{
+    -fx-background-color:#E5E5E5; 
+}
+
+
+
