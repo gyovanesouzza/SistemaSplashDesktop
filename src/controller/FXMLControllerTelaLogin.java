@@ -63,7 +63,7 @@ public class FXMLControllerTelaLogin implements Initializable {
     private double yOffset = 0;
 
     @FXML
-    private void handlerButtonCliecks(MouseEvent evt) {
+    private void mouseClickedEntrar(MouseEvent evt) {
         if (evt.getSource() == btnEntrar) {
 
             try {
@@ -74,22 +74,7 @@ public class FXMLControllerTelaLogin implements Initializable {
                     usuario = serviceUsuario.informacoesConta(usuario);
                     try {
                         Node node = (Node) evt.getSource();
-                        Stage stage = (Stage) node.getScene().getWindow();
-                        stage.close();
-                        Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLTelaPrincipal.fxml"));
-
-                        root.setOnMousePressed((MouseEvent event) -> {
-                            xOffset = event.getSceneX();
-                            yOffset = event.getSceneY();
-                        });
-                        root.setOnMouseDragged((MouseEvent event) -> {
-                            stage.setX(event.getScreenX() - xOffset);
-                            stage.setY(event.getScreenY() - yOffset);
-                        });
-
-                        Scene scene = new Scene(root);
-                        stage.setScene(scene);
-                        stage.show();
+                        entrarSistema(node);
                     } catch (IOException ex) {
                         System.out.println("Err" + ex.getMessage());
                         ex.printStackTrace();
@@ -110,13 +95,71 @@ public class FXMLControllerTelaLogin implements Initializable {
 
     }
 
+    @FXML
+    void keyPressedEntrar(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+
+            usuario.setLogin(txtUsuario.getText());
+            usuario.setSenha(txtSenha.getText());
+
+            try {
+                if (serviceUsuario.logar(usuario)) {
+                    usuario = serviceUsuario.informacoesConta(usuario);
+                    try {
+                        Node node = (Node) event.getSource();
+                        entrarSistema(node);
+                    } catch (IOException ex) {
+                        Logger.getLogger(FXMLControllerTelaLogin.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else {
+                    Alert alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Informação");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Usuario Errado");
+                    alert.showAndWait();
+
+                }
+
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLControllerTelaLogin.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+    private void entrarSistema(Node node) throws IOException {
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLTelaPrincipal.fxml"));
+
+        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+
+        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffset);
+                stage.setY(event.getScreenY() - yOffset);
+            }
+        });
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
             AnchorPane barra = FXMLLoader.load(getClass().getResource("/fxml/FXMLBarraTitulo.fxml"));
             acBarraTitulo.getChildren().setAll(barra);
+
         } catch (IOException ex) {
-            Logger.getLogger(FXMLControllerTelaLogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FXMLControllerTelaLogin.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
     }
 
